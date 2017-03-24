@@ -46,7 +46,7 @@ echo
 printf "Press any key to continue or Ctrl+C to Exit\n"
 echo
 read -n1 -r
-echo // needed for new line
+echo                                                         ## needed for new line
 #
 # need an errorcheck to exit if pacstrap fails
 #
@@ -59,11 +59,11 @@ printf "Review the fstab BEFORE contiuing...\n"
 echo
 printf "Press any key to continue\n"
 read -n1 -r
-echo // needed for new line
+echo                                                         ## needed for new line
 
 # chroot into new system
 printf "Time to enter the new system to finish setup...\n"
-printf " CHROOTing into the new system (notice the new prompt)...\n"
+printf "CHROOTing into the new system (notice the new prompt)...\n"
 arch-chroot /mnt /bin/bash
 
 # update pacman database
@@ -71,7 +71,7 @@ printf "Creating the pacman database...\n"
 pacman -Syy
 
 # install git
-# pacman -S git lynx samba  // not enough freespace
+# pacman -S git lynx samba  ## not enough freespace on install system
 
 # create locale.gen file and import
 printf "Creating your locale...\n"
