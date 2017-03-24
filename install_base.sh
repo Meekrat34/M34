@@ -57,7 +57,7 @@ arch-chroot /mnt /bin/bash
 pacman -Syy
 
 # install git
-#pacman -S git lynx samba  // not enough freespace
+# pacman -S git lynx samba  // not enough freespace
 
 # create locale.gen file and import
 echo $LOC_GEN > /etc/locale.gen
