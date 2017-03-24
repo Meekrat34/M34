@@ -24,7 +24,7 @@ PAC_B='lynx binutils ddrescue e2fsprogs hdparm'
 PAC_C='vlc gimp blender audacity'
 #
 # Extra packages that I have found usefull, but not all the time
-XTRA='parted gparted ddrescue'#
+XTRA='parted gparted ddrescue'
 # If you don't want extra then remove variable from below
 # Also change the package letter to match your ultimate desire for you machine
 #
