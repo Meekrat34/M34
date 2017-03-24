@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Clear the screen to start fresh
+clear
 # This is the first script to pre the system for base install
 #
 # NOTE: You must partition your drive yourself. I believe there
