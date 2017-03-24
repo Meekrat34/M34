@@ -14,14 +14,6 @@ DEST_ROOT='/dev/sdb1'                             ##   Set the "/" ROOT drive/pa
 DEST_HOME=''                                      ## Set the HOME drive/partition to format. ALSO uncomment mount line below.
 DEST_SWAP='/dev/sdb2'                             ## Set the SWAP drive/partion to initialze.
 PACFILES='base base-devel git lynx samba'
-LOC_GEN='en_US.UTF-8 UTF-8'                       ## Set your locale if you know it.
-LOC_CONF='en_US.UTF-8'
-HOSTNAME='Arch'
-GROUPS='wheel,users,video,audio'
-SHELL='/bin/bash'
-USERNAME='dave'
-
-
 
 # Begin system prep
 timedatectl set-ntp true                          ## turn on network time sync
