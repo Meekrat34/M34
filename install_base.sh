@@ -52,6 +52,9 @@ echo                                                         ## needed for new l
 #
 # need an errorcheck to exit if pacstrap fails
 #
+# copy scripts needed after chroot
+mkdir /mnt/root/bin
+cp /root/M34-master/* /mnt/root/bin
 # create fstab file
 printf "Generating new fstab in /mnt/etc/fstab...\n"
 genfstab -L -p /mnt >> /mnt/etc/fstab
@@ -67,41 +70,3 @@ echo                                                         ## needed for new l
 printf "Time to enter the new system to finish setup...\n"
 printf "CHROOTing into the new system (notice the new prompt)...\n"
 arch-chroot /mnt /bin/bash
-
-# update pacman database
-printf "Creating the pacman database...\n"
-pacman -Syy
-
-# install git
-# pacman -S git lynx samba  ## not enough freespace on install system
-
-# create locale.gen file and import
-printf "Creating your locale...\n"
-echo $LOC_GEN > /etc/locale.gen
-echo "LANG=$LOC_CONF" > /etc/locale.conf
-locale-gen
-
-# change clock settings
-printf "Setting up clock and hostname...\n"
-hwclock --systohc --utc
-echo $HOSTNAME > /etc/hostname
-
-# set root password
-printf "Time to create a ROOT password ( NOT USER )...\n"
-passwd
-
-# create a user
-printf "Now lets create that user...\n"
-printf "Creating" $USERNAME " at this time...\n"
-useradd --create-home --groups $GROUPS --shell $SHELL $USERNAME
-printf "User needs a password also...\n"
-passwd $USERNAME
-echo
-echo
-echo " You will need to edit your HOSTS file to add your hostname"
-echo " If no errors, then you need to install your BOOTLOADER ( grub or syslinux )
-echo
-echo " NOTE: syslinux needs line uncommented after formating the partition, "
-echo "            look for the ...resize -s... line above."
-echo
-echo
