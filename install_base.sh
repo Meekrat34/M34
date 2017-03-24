@@ -46,7 +46,7 @@ echo                                                         ## needed for new l
 #
 # copy scripts needed after chroot
 mkdir /mnt/root/bin
-cp /root/M34-master/* /mnt/root/bin
+cp -r /root/M34-master/* /mnt/root/bin
 # create fstab file
 printf "Generating new fstab in /mnt/etc/fstab...\n"
 genfstab -L -p /mnt >> /mnt/etc/fstab
