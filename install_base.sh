@@ -11,7 +11,7 @@
 DEST_ROOT = "/dev/sdb1"   // Set the "/" ROOT drive/partition to format.
 DEST_HOME = ""   // Set the HOME drive/partition to format. ALSO uncomment mount line below.
 DEST_SWAP = "/dev/sdb2"   // Set the SWAP drive/partion to initialze.
-PACFILES = "base base-devel"
+PACFILES = "base base-devel git lynx samba"
 LOC_GEN = "en_US.UTF-8 UTF-8"            // Set your locale if you know it.
 LOC_CONF = "en_US.UTF-8"
 HOSTNAME = "Arch"
@@ -52,6 +52,12 @@ echo // needed for new line
 
 # chroot into new system
 arch-chroot /mnt /bin/bash
+
+# update pacman database
+pacman -Syy
+
+# install git
+#pacman -S git lynx samba  // not enough freespace
 
 # create locale.gen file and import
 echo $LOC_GEN > /etc/locale.gen
