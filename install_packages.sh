@@ -11,7 +11,7 @@ clear   ## I love to start with a clean screen, don't you?
 # Soooo, let's fatten it up a bit shall we
 #
 # Common packages, no matter what machine setup I build.
-COMM='mc sudo tree git dialog tmux openssh memtest86+ bsd-games samba cdrtools cifs-utils udiskie unrar unzip p7zip'
+COMM='mc sudo tree git tig dialog tmux openssh memtest86+ bsd-games samba cdrtools cifs-utils udiskie unrar unzip p7zip veracrypt'
 #
 # Make a choice of packages to install.
 #
@@ -19,12 +19,12 @@ COMM='mc sudo tree git dialog tmux openssh memtest86+ bsd-games samba cdrtools c
 # PAC_B - Simple server setup, no gui
 # PAC_C - Studio type with Video, Audio, Image, and 3D model editors and DVD mastering tools
 #
-PAC_A='lxde lxdm xorg vlc Qt4'
+PAC_A='lxde lxdm xorg vlc qt4'
 PAC_B='lynx binutils ddrescue e2fsprogs hdparm'
-PAC_C='vlc gimp 3Dblender'
+PAC_C='vlc gimp blender audacity'
 #
 # Extra packages that I have found usefull, but not all the time
-XTRA='parted gparted ddrescue ddrescue-gui'#
+XTRA='parted gparted ddrescue'#
 # If you don't want extra then remove variable from below
 # Also change the package letter to match your ultimate desire for you machine
 #
@@ -34,7 +34,7 @@ pacman -S $COMM $PAC_A $XTRA
 # vlc for command line?
 #
 # Verify the names of the following. caps, spelling, special symbols, etc. They MUST be excact or they will fail.
-# 3dblender ddrescue-gui Qt4
+# ddrescue-gui
 
 
 
