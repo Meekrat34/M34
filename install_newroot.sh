@@ -9,7 +9,7 @@ HOSTNAME='Arch'
 GROUPS='wheel,users,video,audio'
 SHELL='/bin/bash'
 USERNAME='dave'
-BOOTLDR='syslinux'                                ## choose your bootloader. DOWNLOAD ONLY. Install will be later.
+BOOTLDR='syslinux gptfdisk'                                ## choose your bootloader. DOWNLOAD ONLY. Install will be later.
 
 
 # update pacman database
@@ -33,18 +33,20 @@ echo $HOSTNAME > /etc/hostname
 
 # set root password
 printf "Time to create a ROOT password ( NOT USER )...\n"
+echo
 passwd
 
 # create a user
 printf "Now lets create that user...\n"
-printf "Creating" $USERNAME " at this time...\n"
+printf "Creating -> $USERNAME <- at this time...\n"
 useradd --create-home --groups $GROUPS --shell $SHELL $USERNAME
 printf "User needs a password also...\n"
+echo
 passwd $USERNAME
 echo
 echo
 echo " You will need to edit your HOSTS file to add your hostname"
-echo " If no errors, then you need to install your BOOTLOADER ( grub or syslinux )
+echo " If no errors, then you need to install your BOOTLOADER ( grub or syslinux )"
 echo
 echo " NOTE: syslinux needs line uncommented after formating the partition, "
 echo "            look for the ...resize -s... line above."
