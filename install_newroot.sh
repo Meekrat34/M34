@@ -9,16 +9,10 @@ HOSTNAME='StationNamehere'
 GROUPS='wheel,users,video,audio'
 SHELL='/bin/bash'
 USERNAME='Usernamehere'
-BOOTLDR='syslinux gptfdisk'                                ## choose your bootloader. DOWNLOAD ONLY. Install will be later.
-
 
 # update pacman database
 printf "Updating the pacman database...\n"
 pacman -Syy
-
-# Download the bootloader chosen
-printf "Downloading the chosen Bootloader...$BOOTLDR\n"
-pacman -S $BOOTLDR
 
 # create locale.gen file and import
 printf "Creating your locale...\n"
