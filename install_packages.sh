@@ -11,10 +11,10 @@ clear   ## I love to start with a clean screen, don't you?
 # Soooo, let's fatten it up a bit shall we
 #
 ## Common packages, no matter what machine setup I build.
-COMM='mc sudo tree git tig dialog tmux openssh bsd-games samba cdrtools cifs-utils udiskie unrar unzip p7zip p7zip-plugins rsync veracrypt'
+COMM='mc sudo tree git tig dialog tmux openssh bsd-games samba cdrtools cifs-utils udiskie unrar unzip p7zip rsync veracrypt'
 #
 ## Codecs' for video, audio, and reading DVDs'
-CODEC='a52dec faac faad2 flac jasper lame libdca libdv gst-libav libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore gstreamer0.10-plugins libdvdcss libdvdread libdvdnav dvd+rw-tools dvdauthor dvgrab'
+CODEC='a52dec faac faad2 flac jasper lame libdca libdv gst-libav libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore libdvdcss libdvdread libdvdnav dvd+rw-tools dvdauthor dvgrab'
 #
 ## Some extra programs ( not always needed )
 XTRA='parted gparted ddrescue hdparm'
