@@ -5,15 +5,15 @@ clear                             ## Let's start with a clear screen
 # Now let's define some variables
 LOC_GEN='en_US.UTF-8 UTF-8'                       ## Set your locale if you know it.
 LOC_CONF='en_US.UTF-8'
-HOSTNAME='Arch'
+HOSTNAME='StationNamehere'
 GROUPS='wheel,users,video,audio'
 SHELL='/bin/bash'
-USERNAME='dave'
+USERNAME='Usernamehere'
 BOOTLDR='syslinux gptfdisk'                                ## choose your bootloader. DOWNLOAD ONLY. Install will be later.
 
 
 # update pacman database
-printf "Creating the pacman database...\n"
+printf "Updating the pacman database...\n"
 pacman -Syy
 
 # Download the bootloader chosen
