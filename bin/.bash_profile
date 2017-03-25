@@ -12,7 +12,7 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# if running bash
+# if running bash then source bashrc
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
@@ -20,16 +20,16 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
+# set PATH so it includes user's private bin if it exists ( home to my scripts )
 if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# Load alias profile
+# Load alias profile 
 if [ -f "$HOME/.bash_aliases" ]; then
 	. "$HOME/.bash_aliases"
 fi
 # Load profile
-if [ -f "$HOME/.profile" ];
+if [ -f "$HOME/.profile" ]; then
 	. "$HOME/.profile"
 fi
