@@ -8,12 +8,16 @@ clear
 #         is too much room for error and/or damage to data to
 #         script in drive partitioning.
 #
+# Load variables from settings file
+#
+if [ -f "../settings.conf" ]
+  then
+      DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+      source "$DIR/../settings.conf"
+  else
+      exit;
+fi
 
-# Set a few variables
-DEST_ROOT='/dev/sdb1'                             ##   Set the "/" ROOT drive/partition to format.
-DEST_HOME=''                                      ## Set the HOME drive/partition to format. ALSO uncomment mount line below.
-DEST_SWAP='/dev/sdb2'                             ## Set the SWAP drive/partion to initialze.
-PACFILES='base base-devel memtest86+ git lynx samba'  ## need to test if lynx and samba can be used at this stage. if not, remove.
 
 # Begin system prep
 timedatectl set-ntp true                          ## turn on network time sync
