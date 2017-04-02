@@ -1,6 +1,12 @@
 #!/bin/bash
 #
+# Lets' check for the setting.conf file. Going to kind of need it
 #
+if [ -f "../settings.conf" ]; then
+      source settings.conf
+  else; exit;
+fi
+
 #
 choice=0
 
