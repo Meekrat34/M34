@@ -3,12 +3,13 @@
 clear                             ## Let's start with a clear screen
 
 # Now let's define some variables
-LOC_GEN='en_US.UTF-8 UTF-8'                       ## Set your locale if you know it.
-LOC_CONF='en_US.UTF-8'
-HOSTNAME='StationNamehere'
-GROUPS='wheel,users,video,audio'
-SHELL='/bin/bash'
-USERNAME='Usernamehere'
+if [ -f "../settings.conf" ]
+  then
+      DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+      source "$DIR/../settings.conf"
+  else
+      exit;
+fi
 
 # update pacman database
 printf "Updating the pacman database...\n"
