@@ -9,8 +9,10 @@ clear   ## start with a clean screen
 #  Its here as a reminder on how its run and what to do.
 # Set variable for your drive. ( can variables be read from another file? )
 #
-DEST_ROOT='/dev/sdb'                              ## root drive
-BOOTLDR='syslinux gptfdisk mtools'                ## choose your bootloader. DOWNLOAD ONLY. Install will be later.
+if [ -f "./settings.conf" ]; then
+      source settings.conf; else
+      printf "Settings file not found"; exit
+fi
 #
 # Need to find a way to check for the 64bit vs 32bit instead of running this blind. But works for now.
 #
