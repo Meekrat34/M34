@@ -33,6 +33,7 @@ echo
 printf "Base package installs are -> (${GRN}$PACFILES${DECO})\n"
 echo
 printf " Localization is (${RED}$LOC_GEN${DECO}) and (${GRN}$LOC_CONF${DECO})\n"
+printf " Region is (${GRN}$REGION${DECO}), and City is (${YLW}$CITY${DECO})\n"
 echo
 printf " Hostname is (${RED}$HOSTNAME${DECO}), Groups for (${GRN}$USERNAME${DECO}) are (${RED}$USERGRP${DECO}) 
 	 Your users chosen shell is (${YLW}$SHELL${DECO})\n"
