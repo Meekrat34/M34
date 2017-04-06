@@ -3,12 +3,9 @@
 clear                             ## Let's start with a clear screen
 
 # Now let's define some variables
-if [ -f "../settings.conf" ]
-  then
-      DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-      source "$DIR/../settings.conf"
-  else
-      exit;
+if [ -f "./settings.conf" ]; then
+      source settings.conf; else
+      printf "Settings file not found"; exit
 fi
 
 # update pacman database
