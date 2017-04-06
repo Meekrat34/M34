@@ -18,7 +18,7 @@ DECO='\033[0m' # Default color
 # and to test some of its functions
 #
 echo
-printf " Current connected drives are listed here..."
+printf " Current connected drives are listed here...\n"
 echo
 lsblk
 echo
