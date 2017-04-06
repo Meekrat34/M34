@@ -23,6 +23,9 @@ printf "Setting up clock and hostname...\n"
 hwclock --systohc --utc
 echo $HOSTNAME > /etc/hostname
 
+# Set timezone
+ln -sf /usr/share/zoneinfo/$REGION/$CITY /etc/localtime
+
 # set root password
 printf "Time to create a ROOT password ( NOT USER )...\n"
 echo
