@@ -2,9 +2,9 @@
 #
 # Lets' check for the setting.conf file. Going to kind of need it
 #
-if [ -f "../settings.conf" ]; then
-      source settings.conf
-  else; exit;
+if [ -f "./settings.conf" ]; then
+      source settings.conf; else
+      printf "Settings file not found"; exit
 fi
 
 #
