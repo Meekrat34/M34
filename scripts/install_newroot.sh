@@ -7,7 +7,9 @@ if [ -f "./settings.conf" ]; then
       source settings.conf; else
       printf "Settings file not found"; exit
 fi
-
+#
+# enable network by default
+systemctl enable dhcpcd.service
 # update pacman database
 printf "Updating the pacman database...\n"
 pacman -Syy
