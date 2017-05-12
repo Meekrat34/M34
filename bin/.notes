@@ -1,0 +1,13 @@
+
+# Personal aliases and functions should go in ~/.bashrc. 
+# System wide environment variables and startup programs are in /etc/profile.
+# System wide aliases and functions are in /etc/bashrc.
+
+
+
+
+# Personal environment variables and startup programs. = ~/.bash_profile
+# Personal aliases and functions. = ~/.bashrc
+# Personal items to perform on logout. = ~/.bash_logout
+# My alias collection = ~/.bash_aliases
+
