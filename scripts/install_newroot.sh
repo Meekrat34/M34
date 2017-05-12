@@ -43,7 +43,7 @@ echo
 echo " You will need to edit your HOSTS file to add your hostname"
 echo " If no errors, then you need to install your BOOTLOADER ( grub or syslinux )"
 echo
-echo " NOTE: syslinux needs line uncommented after formating the partition, "
-echo "            look for the ...resize -s... line above."
+echo " NOTE: Syslinux needs ext4 to be 32-bit"
 echo
+PAUSEME
 echo
