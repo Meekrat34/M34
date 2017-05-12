@@ -37,6 +37,6 @@ bin folder
 2. partition drive as desired
 3. update pacman (pacman -Ssy)
 4. install wget and unzip
-5. wget http://github.com/Meekrat34/M34/archive/master.zip
+5. wget https://github.com/Meekrat34/M34/archive/master.zip
 6. unzip master.zip
 7. cd M34-master
