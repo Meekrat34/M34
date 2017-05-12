@@ -16,7 +16,7 @@ fi
 #
 # Need to find a way to check for the 64bit vs 32bit instead of running this blind. But works for now.
 #
-resize2fs -s $DEST_ROOT                           ## uncomment this line if using syslinux to boot, this disables the 64bit
+#resize2fs -s $DEST_ROOT                           ## uncomment this line if using syslinux to boot, this disables the 64bit
 #
 # Download the bootloader chosen
 echo
@@ -39,4 +39,5 @@ printf " If no errors then edit /boot/syslinux/syslinux.cfg to your flavor\n"
 printf "   And enjoy your new Arch install. There is a install_packages to help,"
 printf "     get you going. Edit it BEFORE you run it."
 echo
+PAUSEME
 echo
