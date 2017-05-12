@@ -19,6 +19,10 @@ fi
 # Begin system prep
 timedatectl set-ntp true                          ## turn on network time sync
 
+PAUSEME
+printf "The next step will format $DEST_ROOT and $DEST_SWAP. Are you ready?\n"
+printf "If yes, did you partion the drive first?\n"
+
 # format partitions
 printf "Formating ROOT partition...\n"
 mkfs.ext4 $DEST_ROOT                              ## format drive with ext4
@@ -32,15 +36,13 @@ mount $DEST_ROOT /mnt
 #mount $DEST_HOME /mnt/home
 
 # get base files onto new filesystem
-printf "Download and install base packages onto new filesystem...\n"
+printf "Downloading and installing base packages onto new filesystem...\n"
 pacstrap /mnt $PACFILES
 echo
 printf " If there are ANY errors, exit and fix them now\n"
 echo
-printf "Press any key to continue or Ctrl+C to Exit\n"
+PAUSEME
 echo
-read -n1 -r
-echo                                                         ## needed for new line
 #
 # need an errorcheck to exit if pacstrap fails
 #
@@ -54,8 +56,7 @@ cat /mnt/etc/fstab
 echo
 printf "Review the fstab BEFORE contiuing...\n"
 echo
-printf "Press any key to continue\n"
-read -n1 -r
+PAUSEME
 echo                                                         ## needed for new line
 
 # chroot into new system
