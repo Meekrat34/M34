@@ -26,6 +26,8 @@ printf "If yes, did you partion the drive first?\n"
 # format partitions
 printf "Formating ROOT partition...\n"
 mkfs.ext4 $DEST_ROOT                              ## format drive with ext4
+resize2fs -s $DEST_ROOT                           ## uncomment this line if using syslinux to boot, this disables the 64bit
+
 printf "Initializing swap partition...\n"
 mkswap $DEST_SWAP                                 ## initialize swap
 swapon
