@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# This code is not mine, it is combined from information I gathered in different forums. Not sure who or when
+# ,but this is the resulting script I put together to achive what I was needing. Works great btw.
+#
+# convert files in this folder to mp4
+#
+## run ffmped
+echo
+echo "Source file is ---> $fname"
+echo "Output file is ---> "${fname%.*}.mp4""
+echo
+#
+ffmpeg -hide_banner -i "$fname" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192K -ac 2 "${fname%.*}.mp4";done
