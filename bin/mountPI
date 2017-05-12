@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo mount -t cifs -o user=PIusername //pilocation/folder /home/username/folder
