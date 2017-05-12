@@ -5,7 +5,7 @@ But feel free to use them. If you have an idea to improve on them let me know.
 
 I am new to git, so please be patient with me.
 
-I have them broken down in sections. Each file has variables at the beggining.
+I have them broken down in sections. Each file calls variables at the beggining from the settings.conf file.
 Adjust to your system or it may(probably will) fail.
 
 install_base
@@ -20,7 +20,13 @@ install_newroot
 
 install_syslinux
     - My choice of bootloaders.
-    - This simple is a reminder file as Arch has a wonderfull script I would not dream of touching.
+    - This is a simple reminder file as Arch has a wonderfull script I would not dream of touching.
 
 install_packages
-    - Post install script to install some good software based on the need of the system.
+    - Post install script to install some good software based on the needs/wants of the user.
+
+settings.conf
+    - Holds variables and funtions used by the other scripts
+
+bin folder
+    - This is collection of some of my files I use frequently. Saves on some typeing.
