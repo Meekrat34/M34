@@ -11,4 +11,5 @@ echo "Source file is ---> $fname"
 echo "Output file is ---> "${fname%.*}.mp4""
 echo
 #
-ffmpeg -hide_banner -i "$fname" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192K -ac 2 "${fname%.*}.mp4";done
+#ffmpeg -hide_banner -i "$fname" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192K -ac 2 "${fname%.*}.mp4";done
+ffmpeg -loglevel warning -hide_banner -i "$fname" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192K -ac 2 "${fname%.*}.mp4";done
